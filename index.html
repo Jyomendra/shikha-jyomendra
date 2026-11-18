@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#fff0f5">
+<title>A Little Journey to Shikha ❤️</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Dancing+Script:wght@500;600;700&display=swap');
+:root{--pink:#ed9bb8;--dark-pink:#c65f86;--text:#745360}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{font-family:Nunito,sans-serif;color:var(--text);background:linear-gradient(145deg,#fff6f8,#ffe5ef,#f9edff);min-height:100vh;min-height:100dvh;overflow-x:hidden}
+button{font-family:inherit;border:none;cursor:pointer;touch-action:manipulation}
+#hearts{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.floating-heart{position:absolute;bottom:-40px;animation:floatUp linear forwards;opacity:0}
+.wrapper{min-height:100vh;min-height:100dvh;display:flex;align-items:center;justify-content:center;padding:22px 15px;position:relative;z-index:1}
+.card{width:100%;max-width:440px;background:rgba(255,255,255,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.9);border-radius:30px;padding:24px 20px;box-shadow:0 18px 50px rgba(195,120,150,.15);text-align:center;position:relative;overflow:hidden}
+.top{font-size:20px;margin-bottom:10px}.progress-wrap{width:100%;height:5px;border-radius:20px;background:#f7e3eb;margin-bottom:23px;overflow:hidden}.progress{width:0%;height:100%;background:linear-gradient(90deg,#e88eae,#cf6d95);border-radius:20px;transition:width .5s ease}
+.screen{display:none;animation:enter .55s ease}.screen.active{display:block}h1{font-size:25px;line-height:1.35;color:var(--dark-pink);margin-bottom:12px}h2{color:var(--dark-pink);font-size:22px;margin-bottom:12px}p{font-size:14px;line-height:1.8}.small{font-size:13px;color:#a48693}
+.bears{display:flex;align-items:center;justify-content:center;gap:8px;min-height:190px;margin:15px 0;position:relative}.bear{font-size:105px;line-height:1;display:inline-block;filter:drop-shadow(0 8px 8px #cfa2b444)}.brown-bear{animation:bearBounce 2.5s infinite}.white-bear{animation:bearBounce 2.5s infinite .5s}.heart-between{font-size:28px;animation:pulse 1.4s infinite}
+.primary{width:100%;max-width:310px;padding:15px 20px;margin:20px auto 0;display:block;border-radius:50px;color:white;font-weight:800;font-size:16px;background:linear-gradient(135deg,#ed9bb8,#d66f98);box-shadow:0 8px 20px #dc91b166;transition:.2s}.primary:active{transform:scale(.96)}.secondary{display:block;margin:12px auto 0;background:transparent;color:#b17d92;padding:10px;font-size:13px}
+.envelope{font-size:120px;margin:20px 0;display:inline-block;cursor:pointer;animation:pulse 2s infinite}.envelope.open{animation:openEnvelope .7s forwards}
+.story-box{background:#fff5f8;border:1px solid #f7dce7;border-radius:20px;padding:18px;margin:18px 0;min-height:115px;display:flex;align-items:center;justify-content:center}.story-box p{font-size:15px;font-weight:700;color:#926779}
+.hearts-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:18px 0}.heart-btn{background:#fff0f5;border:1px solid #f6d4e1;border-radius:15px;min-height:65px;font-size:29px;transition:.3s}.heart-btn:active{transform:scale(.88)}.heart-btn.opened{background:#f9dce9;transform:scale(.95)}.realization{min-height:105px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;line-height:1.8;padding:10px;animation:enter .4s}.counter{font-size:12px;color:#bc91a5}
+.hug-scene{min-height:220px;display:flex;justify-content:center;align-items:center;gap:0;position:relative;margin:15px 0}.hug-scene .bear{transition:transform 1.5s cubic-bezier(.2,.8,.2,1)}.hugging .left-bear{transform:translateX(30px) rotate(5deg)}.hugging .right-bear{transform:translateX(-30px) rotate(-5deg)}.hug-heart{position:absolute;font-size:35px;opacity:0;top:30px;animation:heartPop 1s 1.3s forwards}
+.letter{text-align:left;background:#fff7fa;padding:20px;border-radius:20px;border:1px solid #f7dce7;max-height:330px;overflow-y:auto;margin-top:15px}.letter p{margin-bottom:13px}.letter .closing{text-align:center;font-family:'Dancing Script',cursive;font-size:26px;color:#c46084;margin-top:20px}.footer{font-size:11px;margin-top:22px;color:#c29baa}.hidden{display:none!important}
+@keyframes enter{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}@keyframes bearBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.12)}}@keyframes floatUp{0%{transform:translateY(0) rotate(0);opacity:0}10%{opacity:.8}100%{transform:translateY(-110vh) rotate(40deg);opacity:0}}@keyframes openEnvelope{0%{transform:scale(1)}50%{transform:scale(1.2) rotate(-8deg)}100%{transform:scale(1.4);opacity:0}}@keyframes heartPop{0%{opacity:0;transform:scale(.3)}50%{opacity:1;transform:scale(1.5)}100%{opacity:1;transform:scale(1)}}
+@media(max-width:360px){.card{padding:21px 15px}.bear{font-size:85px}h1{font-size:22px}.hearts-grid{gap:5px}.heart-btn{min-height:55px}}
+</style>
+</head>
+<body>
+<div id="hearts"></div>
+<div class="wrapper"><div class="card">
+<div class="top">🐻🤍🐻‍❄️</div>
+<div class="progress-wrap"><div class="progress" id="progress"></div></div>
+
+<section class="screen active" id="screen1">
+<h1>A little letter for Shikha 💌</h1>
+<p>Someone who loves you very much has something to say...</p>
+<div class="envelope" id="envelope" onclick="openLetter()">💌</div>
+<p class="small">Tap the letter to open it</p>
+<div class="bears"><span class="bear brown-bear">🐻</span><span class="heart-between">💕</span><span class="bear white-bear">🐻‍❄️</span></div>
+<button class="primary hidden" id="startBtn" onclick="goTo(2)">Read my little story ❤️</button>
+</section>
+
+<section class="screen" id="screen2">
+<h1>Sometimes we get lost in little misunderstandings... 🥺</h1>
+<div class="bears"><span class="bear" style="transform:rotate(-10deg)">🐻</span><span style="font-size:30px">💔</span><span class="bear" style="transform:rotate(10deg)">🐻‍❄️</span></div>
+<div class="story-box"><p>Two people can love each other deeply and still hurt each other with words they never meant to make so painful.</p></div>
+<p>But a misunderstanding doesn't make you enemies. You're still on the same team. 🤍</p>
+<button class="primary" onclick="goTo(3)">What Jyomendra wants to say... 💗</button>
+</section>
+
+<section class="screen" id="screen3">
+<h1>5 little things I want to remember ❤️</h1>
+<p>Tap every heart. Each one has something important inside.</p>
+<div class="hearts-grid" id="heartGrid">
+<button class="heart-btn" onclick="reveal(0)">💗</button>
+<button class="heart-btn" onclick="reveal(1)">💗</button>
+<button class="heart-btn" onclick="reveal(2)">💗</button>
+<button class="heart-btn" onclick="reveal(3)">💗</button>
+<button class="heart-btn" onclick="reveal(4)">💗</button>
+</div>
+<div class="story-box"><div class="realization" id="realization">A little reminder from Jyomendra to Shikha... 💌</div></div>
+<div class="counter" id="counter">0 of 5 hearts discovered ❤️</div>
+<button class="primary hidden" id="heartNext" onclick="goTo(4)">One last thing... 🥺</button>
+</section>
+
+<section class="screen" id="screen4">
+<h1>Can we leave the fight behind? 🫂</h1>
+<p>Not because everything was perfect...</p>
+<p>But because we mean more than one difficult moment.</p>
+<div class="hug-scene" id="hugScene"><span class="bear left-bear">🐻</span><span class="bear right-bear">🐻‍❄️</span><span class="hug-heart">❤️</span></div>
+<div class="story-box"><p>Jyomendra doesn't want to defeat Shikha in an argument.<br><br>He wants to understand her, stand beside her, and hold her hand through everything.</p></div>
+<button class="primary" onclick="makeHug()">Send us a little hug 🫂</button>
+<button class="secondary hidden" id="promiseNext" onclick="goTo(5)">Read my promise to you 💌</button>
+</section>
+
+<section class="screen" id="screen5">
+<h1>To my Shikha, with love 🤍</h1>
+<div class="bears"><span class="bear brown-bear">🐻</span><span class="heart-between">❤️</span><span class="bear white-bear">🐻‍❄️</span></div>
+<div class="letter">
+<p><strong>Dear Shikha,</strong></p>
+<p>Sometimes I can be silly, stubborn, and not very good at expressing what's actually in my heart.</p>
+<p>I know that sometimes my words or reactions hurt you, and I'm genuinely sorry for that.</p>
+<p>I don't want you to feel that you have to fight to be understood by me. I want to learn to listen to you, understand your feelings, and make you feel safe enough to tell me anything.</p>
+<p>I know love isn't just about the happy moments, cute pictures, gifts, or saying I love you. It's also about how we treat each other when we're upset, when we disagree, and when things aren't going our way.</p>
+<p>I may not always get everything right, but I never want to stop trying to become a better partner for you.</p>
+<p>I don't want a perfect relationship. I just want us to keep choosing each other, understanding each other, and loving each other a little better every day.</p>
+<p>No matter how silly our fights get, I hope we never forget that we're on the same team.</p>
+<p>You and me, Shikha. Always. ❤️</p>
+<div class="closing">Forever yours,<br>Jyomendra 🤎</div>
+</div>
+<button class="primary" onclick="finalHug()">One last hug? 🫂</button>
+<div class="footer">Made with love. Just for Shikha. 🤍</div>
+</section>
+</div></div>
+
+<script>
+let currentScreen=1;
+let discovered=[false,false,false,false,false];
+let hugging=false;
+let heartTimer=null;
+
+const thoughts=[
+"I should listen to you fully instead of reacting too quickly. ❤️",
+"Your feelings deserve to be understood, even when I see things differently. 🤍",
+"I never want my teasing to make you feel small, unheard, or unimportant. 🥺",
+"I should choose patience and kindness, especially when we're upset. 💗",
+"We're partners, Jyomendra and Shikha. It's never me versus you. It's us. 🫂"
+];
+
+function openLetter(){
+const envelope=document.getElementById('envelope');
+envelope.classList.add('open');
+setTimeout(()=>{
+envelope.innerText='💖';
+document.getElementById('startBtn').classList.remove('hidden');
+},600);
+}
+
+function goTo(number){
+document.getElementById('screen'+currentScreen).classList.remove('active');
+currentScreen=number;
+document.getElementById('screen'+currentScreen).classList.add('active');
+document.getElementById('progress').style.width=((number-1)/4*100)+'%';
+window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function reveal(index){
+if(discovered[index])return;
+discovered[index]=true;
+const buttons=document.querySelectorAll('.heart-btn');
+buttons[index].classList.add('opened');
+buttons[index].innerText='💝';
+document.getElementById('realization').innerText=thoughts[index];
+const total=discovered.filter(Boolean).length;
+document.getElementById('counter').innerText=total+' of 5 hearts discovered ❤️';
+if(total===5){
+document.getElementById('heartNext').classList.remove('hidden');
+document.getElementById('realization').innerText='You found all 5 hearts. These are little things Jyomendra wants to remember, not just today, but every day. 🤍';
+}
+}
+
+function makeHug(){
+if(hugging)return;
+hugging=true;
+document.getElementById('hugScene').classList.add('hugging');
+createHeartBurst();
+document.getElementById('promiseNext').classList.remove('hidden');
+}
+
+function createHeartBurst(){
+for(let i=0;i<15;i++){
+setTimeout(()=>{
+const heart=document.createElement('div');
+heart.className='floating-heart';
+heart.innerText=['❤️','💗','💕','🤍','💖'][Math.floor(Math.random()*5)];
+heart.style.left=Math.random()*100+'vw';
+heart.style.fontSize=(18+Math.random()*20)+'px';
+heart.style.animationDuration=(3+Math.random()*3)+'s';
+document.getElementById('hearts').appendChild(heart);
+setTimeout(()=>heart.remove(),6500);
+},i*100);
+}
+}
+
+function finalHug(){
+createHeartBurst();
+const heading=document.querySelector('#screen5 h1');
+heading.innerText='Sending the biggest hug to Shikha 🤍';
+const button=document.querySelector('#screen5 .primary');
+button.innerText='Jyomendra ❤️ Shikha — Always';
+button.disabled=true;
+}
+
+function ambientHearts(){
+if(heartTimer)return;
+heartTimer=setInterval(()=>{
+const heart=document.createElement('div');
+heart.className='floating-heart';
+heart.innerText=['♡','💕','✨','🤍'][Math.floor(Math.random()*4)];
+heart.style.left=Math.random()*100+'vw';
+heart.style.fontSize=(12+Math.random()*14)+'px';
+heart.style.animationDuration=(6+Math.random()*5)+'s';
+document.getElementById('hearts').appendChild(heart);
+setTimeout(()=>heart.remove(),11000);
+},1200);
+}
+ambientHearts();
+</script>
+</body>
+</html>
